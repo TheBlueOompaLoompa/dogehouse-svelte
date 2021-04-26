@@ -1,50 +1,38 @@
 <script>
-	import successkid from 'images/successkid.jpg';
 </script>
 
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+	:global(body) {
+		@font-face { font-family: "Inter"; src: url("Inter (web)/Inter-Regular.woff2") format("woff2"), url("Inter (web)/Inter-Regular.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
+		font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+		font-style: normal;
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
+	:global(h1, h2, h3, h4, p.bold) {
 		font-weight: 700;
-		margin: 0 0 0.5em 0;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
+	:global(h1, h2, h3, h4, p) {
+		line-height: 1.6;
 	}
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
+	:global(blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre) {
+		margin: 0;
 	}
 
-	p {
-		margin: 1em auto;
+	:global(h4) {
+		font-size: 1.4rem;
 	}
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
+	:global(.font-bold) {
+		font-weight: 700;
+	}
+
+	:global(.mt-3) {
+		margin-top: 15px;
+	}
+	
+	:global(.text-sm) {
+		font-size: .875;
 	}
 </style>
-
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>

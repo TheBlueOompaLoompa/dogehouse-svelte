@@ -1,22 +1,36 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+	import PaneLeft from '../components/left/PaneLeft.svelte';
+	import SvHead from './head.svelte';
 
 	export let segment;
+
+	let people = [
+		{
+			name: 'Idiot',
+			icon: "logo-192.png",
+			online: true,
+		}
+	];
+
 </script>
 
 <style>
 	main {
+		display: grid;
+		grid-template-columns: 235px 640px 325px;
+		column-gap: 60px;
+
 		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
+
+		scrollbar-width: thin;
+		
 	}
 </style>
 
-<Nav {segment}/>
+<svelte:head>
+	<SvHead page={segment}></SvHead>
+</svelte:head>
 
 <main>
-	<slot></slot>
+	<PaneLeft people={people}></PaneLeft>
 </main>
